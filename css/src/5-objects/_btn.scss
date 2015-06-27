@@ -1,0 +1,27 @@
+.button {
+    @include header_font_family;
+    @include mega_small_font_size;
+    @include short-transition;
+    
+    appearance: none;
+    background-color: $black;
+    border: rem(1px) solid currentColor;
+    border-radius: rem($half-spacing-unit);
+    color: $white;
+    display: inline-block;
+    margin-bottom: rem($half-spacing-unit);
+    padding: rem($quarter-spacing-unit) rem($half-spacing-unit);
+    text-decoration: none;
+    
+    
+    &:hover,
+    &:focus {
+        background-color: $white;
+        color: $black;
+    }
+    
+    &--secondary {
+        background-color: $secondary-brand;
+    }
+
+}

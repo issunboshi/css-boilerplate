@@ -1,0 +1,370 @@
+@font-face {
+    font-family: 'FuturaBT-Book';
+    src: url('/assets/css/font/FuturaBTW01Book.eot');
+    src: url('/assets/css/font/FuturaBTW01Book.eot?#iefix') format('embedded-opentype'),
+    url('/assets/css/font/FuturaBTW01Book.woff2') format('woff2'),
+    url('/assets/css/font/FuturaBTW01Book.woff') format('woff'),
+    url('/assets/css/font/FuturaBTW01Book.ttf') format('truetype'),
+    url('/assets/css/font/FuturaBTW01Book.svg#FuturaBT-Book') format('svg');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaBT-Light';
+    src: url('/assets/css/font/FuturaBTW01Light.eot');
+    src: url('/assets/css/font/FuturaBTW01Light.eot?#iefix') format('embedded-opentype'),
+    url('/assets/css/font/FuturaBTW01Light.woff2') format('woff2'),
+    url('/assets/css/font/FuturaBTW01Light.woff') format('woff'),
+    url('/assets/css/font/FuturaBTW01Light.ttf') format('truetype'),
+    url('/assets/css/font/FuturaBTW01Light.svg#FuturaBT-Light') format('svg');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaBT-Medium';
+    src: url('/assets/css/font/FuturaBTW01Medium.eot');
+    src: url('/assets/css/font/FuturaBTW01Medium.eot?#iefix') format('embedded-opentype'),
+    url('/assets/css/font/FuturaBTW01Medium.woff2') format('woff2'),
+    url('/assets/css/font/FuturaBTW01Medium.woff') format('woff'),
+    url('/assets/css/font/FuturaBTW01Medium.ttf') format('truetype'),
+    url('/assets/css/font/FuturaBTW01Medium.svg#FuturaBT-Medium') format('svg');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaBT-Heavy';
+    src: url('/assets/css/font/FuturaBTW01Heavy.eot');
+    src: url('/assets/css/font/FuturaBTW01Heavy.eot?#iefix') format('embedded-opentype'),
+    url('/assets/css/font/FuturaBTW01Heavy.woff2') format('woff2'),
+    url('/assets/css/font/FuturaBTW01Heavy.woff') format('woff'),
+    url('/assets/css/font/FuturaBTW01Heavy.ttf') format('truetype'),
+    url('/assets/css/font/FuturaBTW01Heavy.svg#FuturaBT-Heavy') format('svg');
+    font-style: normal;
+}
+
+//Type placeholders
+@mixin plain_font_family {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@mixin body_font_family {
+    font-family: 'FuturaBT-Light', Arial, Helvetica, Verdana, sans-serif;
+}
+
+%body_font_family {
+    @include body_font_family;
+}
+
+@mixin header_font_family {
+    font-family: 'FuturaBT-Medium', Arial, Helvetica, Verdana, sans-serif;
+}
+
+%header_font_family {
+    @include header_font_family;
+}
+
+@mixin book_font_family {
+    font-family: 'FuturaBT-Book', Arial, Helvetica, Verdana, sans-serif;
+}
+
+@mixin heavy_font_family {
+    font-family: 'FuturaBT-Heavy', Arial, Helvetica, Verdana, sans-serif;
+}
+
+$p-font-sizes: (
+    null: (rem($base-font-size), 1.5)
+);
+
+$large-p-font-sizes: (
+    null: (rem($base-font-size), 1.3),
+    xx-large: (rem($slarger-font-size))
+);
+
+$large-heading-font-sizes: (
+    null: (rem($xxxxlarge-font-size), 1.1),
+    xx-large: (rem($ultra-font-size)),
+);
+
+$h1-font-sizes: (
+    null: (rem($mega-font-size), 1.5),
+    med: (rem($giga-font-size), 1.25),
+    xx-large: (rem($xgiga-font-size), 1.25),
+);
+
+$h2-font-sizes: (
+    null: (rem($xxxxxlarge-font-size), 1.1),
+    med: (rem($mega-font-size)),
+    xx-large: (rem($giga-font-size)),
+);
+
+$h3-font-sizes: (
+    null: (rem($xxxxlarge-font-size), 1.5),
+    med: (rem($xxxxxlarge-font-size), 1.25),
+    xx-large: (rem($mega-font-size), 1.25),
+);
+
+$h4-font-sizes: (
+    null: (rem($xxxlarge-font-size), 1.5),
+    med: (rem($xxxxlarge-font-size), 1.25),
+    xx-large: (rem($xxxxxlarge-font-size), 1.25),
+);
+
+$h5-font-sizes: (
+    null: (rem($xxlarge-font-size), 1.5),
+    med: (rem($xxxlarge-font-size), 1.25),
+    xx-large: (rem($xxxxlarge-font-size), 1.25),
+);
+
+$h6-font-sizes: (
+    null: (rem($larger-font-size), 1.1),
+    med: (rem($xxlarge-font-size)),
+    xx-large: (rem($xxxlarge-font-size)),
+);
+
+@mixin paragraph_size {
+    @include font-size($p-font-sizes);
+}
+
+%paragraph_size {
+    @include paragraph_size;
+}
+
+@mixin intro_paragraph_size {
+    @include font-size($large-p-font-sizes);
+}
+
+%intro_paragraph_size {
+    @include intro_paragraph_size;
+}
+
+@mixin large_heading_size {
+    @include font-size($large-heading-font-sizes);
+}
+
+@mixin heading_1_size {
+    @include font-size($h1-font-sizes);
+}
+
+%heading_1_size {
+    @include heading_1_size;
+}
+
+@mixin heading_2_size {
+    @include font-size($h2-font-sizes);
+}
+
+%heading_2_size {
+    @include heading_2_size;
+}
+
+@mixin heading_3_size {
+    @include font-size($h3-font-sizes);
+}
+    
+%heading_3_size {
+    @include heading_3_size;
+}   
+
+@mixin panel_header_size {
+    @include font-size($h6-font-sizes);
+}
+
+@mixin heading_4_size {
+    @include font-size($h4-font-sizes);
+}
+
+%heading_4_size {
+    @include heading_4_size;
+}
+
+@mixin heading_5_size {
+    @include font-size($h5-font-sizes);
+}
+
+%heading_5_size {
+    @include heading_5_size;
+}
+
+@mixin heading_6_size {
+    @include font-size($h6-font-sizes);
+}
+
+%heading_6_size {
+    @include heading_6_size;
+}
+
+@mixin small_font_size {
+    font-size: rem($smaller-font-size);
+}
+
+%small_font_size {
+    @include small_font_size;
+}
+
+@mixin mega_small_font_size {
+    font-size: rem($tiny-font-size);
+}
+
+%mega_small_font_size {
+    @include mega_small_font_size;
+}
+
+html {
+    font-size: $base-font-size;
+}
+
+body {
+    @include body_font_family;
+
+    color: $black;
+    font-size: rem($base-font-size);
+}
+
+strong,
+b {
+    @include header_font_family;
+    font-weight: bold;
+}
+
+@mixin italic {
+    font-style: italic;
+}
+
+em,
+i,
+cite {
+    @include italic;
+}
+
+figcaption {
+    color: $black;
+}
+
+cite {
+    color: $black;
+}
+
+small {
+    @include mega_small_font_size;
+}
+
+abbr,
+dfn {
+    &[title] {
+        border-bottom: 1px dotted;
+        cursor: help;
+    }
+}
+
+sub,
+sup {
+    @include mega_small_font_size;
+    line-height: 90%;
+}
+
+sub {
+    vertical-align: sub;
+}
+
+sup {
+    vertical-align: super;
+}
+
+p {
+    @include paragraph_size;
+    margin-bottom: $quarter-spacing-unit;
+}
+
+a {
+    @include short-transition;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+        color: $brand;
+    }
+}
+
+ul {
+    margin-bottom: rem($quarter-spacing-unit);
+    margin-left: rem($half-spacing-unit);
+}
+
+ol {
+    margin-bottom: rem($quarter-spacing-unit);
+    margin-left: rem($three-quarter-spacing-unit);
+}
+
+li {
+    @include paragraph_size;
+    margin-bottom: rem($tiny-spacing-unit);
+}
+
+dl {
+    margin-bottom: rem($quarter-spacing-unit);
+}
+
+dt {
+    font-weight: bold;
+    margin-bottom: rem($tiny-spacing-unit);
+}
+
+dd {
+    margin-bottom: rem($quarter-spacing-unit);
+    margin-left: rem($three-quarter-spacing-unit);
+}
+
+blockquote {
+    border-left: $brand 5px solid;
+    padding-left: $quarter-spacing-unit;
+
+    > p {
+        @include paragraph_size;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include header_font_family;
+    font-weight: normal;
+}
+
+h1 {
+    @include heading_1_size;
+
+    margin-bottom: $three-quarter-spacing-unit;
+}
+
+h2 {
+    @include heading_2_size;
+
+    margin-bottom: $half-spacing-unit;
+}
+
+h3 {
+    @include heading_3_size;
+
+    margin-bottom: $quarter-spacing-unit;
+}
+
+h4 {
+    @include heading_4_size;
+
+    margin-bottom: $quarter-spacing-unit;
+}
+
+h5 {
+    @include heading_5_size;
+
+    margin-bottom: $quarter-spacing-unit;
+}
+
+h6 {
+    @include heading_6_size;
+
+    margin-bottom: $quarter-spacing-unit;
+}

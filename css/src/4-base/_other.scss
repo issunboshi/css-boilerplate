@@ -1,0 +1,62 @@
+img {
+    @include max-width-100;
+}
+
+::input-placeholder,
+::textarea-placeholder {
+    color: $base-grey;
+    opacity: .75;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption {
+    caption-side: bottom;
+    color: $base-grey;
+    line-height: 1.3334;
+    margin: 1em 0;
+    text-align: left;
+}
+
+td,
+th {
+    border-bottom: 1px solid $brand;
+    padding: .375em 2em .375em 0;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    font-weight: bold;
+    padding-bottom: rem($tiny-spacing-unit);
+}
+
+thead th {
+    border-bottom: 2px solid $base-grey;
+}
+
+* + * {
+    margin-bottom: rem($half-spacing-unit);
+}
+
+@mixin input-style {
+    border-radius: 2px;
+    border: 1px solid $base-grey;
+    padding: $quarter-spacing-unit;
+}
+
+input,
+textarea {
+    @include input-style;
+}
+
+a[href],
+input[type='submit'],
+label[for],
+select,
+button {
+    cursor: pointer;
+}

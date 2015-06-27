@@ -1,0 +1,51 @@
+@mixin flexbox_row_between($direction:row) {
+    display: flex;
+    flex-direction: #{$direction};
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@mixin list_reset {
+    list-style-type: none;
+    margin: 0;
+}
+
+// Common dimensions
+@mixin max_width_100 {
+    max-width: 100%;
+}
+
+%max_width_100 {
+    @include max_width_100;
+}
+
+@mixin content_width {
+    max-width: $content-width;
+}
+
+%content_width {
+    @include content_width;
+}
+
+// ui
+@mixin ir {
+    text-indent: -9999px;
+}
+
+@mixin border_radius_small {
+    border-radius: rem(3px);
+}
+
+@mixin default_transition {
+    transition: all .5s ease-in-out;
+}
+
+@mixin short_transition {
+    transition: all .25s ease-in-out;
+}
+
+// Margins
+@mixin margin_left_right_auto {
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,7 @@
+.container {
+    @include margin-left-right-auto;
+
+    background-color: $white;
+    max-width: rem($max-site-width);
+    position: relative;
+}

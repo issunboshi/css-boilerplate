@@ -1,0 +1,72 @@
+// px to rem convertor
+@function rem($px, $base: $base-font-size) {
+    @return ($px / $base) * 1rem;
+}
+
+$tiny-font-size: 10px; //speculative
+$smaller-font-size: 12px; //btns, copyright text
+$base-font-size: 14px;//all of footer expt copyright (incl breadcrumb)
+$slarger-font-size: 16px;//Story content
+$larger-font-size: 18px;//Speculative
+$xlarge-font-size: 21px;//tab links
+$xxlarge-font-size: 25px;//header intro
+$xxlarge-font-size: 30px;//speculative
+$xxxlarge-font-size: 32px;//general intro size
+$xxxxlarge-font-size: 40px;//panel header
+$xxxxxlarge-font-size: 45px;//general h1 size, home intro copy
+$mega-font-size: 50px;//speculative
+$giga-font-size: 55px;//speculative
+$xgiga-font-size: 60px;//Story header
+$xxgiga-font-size: 65px;//Story header
+$ultra-font-size: 75px;//homepage header
+
+$brand: #a4a098; //gold
+$secondary-brand: #ffd503; //yellow
+$tertiary-brand: #e28067; //orange/peach
+$brand--light: lighten($brand, 10%);
+
+$base-grey: #999;
+$light-grey: #ebebeb;
+$lighter-grey: #b3b3ab;
+$dark-grey: #656565;
+
+$white: #fff;
+$black: #000;
+$off-white: #f3f3f3;//Nav, tabs bg
+
+// ************************************************************************* //
+// ************************************************************************* //
+// **************************** Spacing & measurements ********************* //
+// ************************************************************************* //
+// ************************************************************************* //
+$base-spacing-unit: 40px;
+
+$tiny-spacing-unit: 5px;
+$quarter-spacing-unit: $base-spacing-unit * .25;
+$small-spacing-unit: 15px;
+$half-spacing-unit: $base-spacing-unit * .5;
+$three-quarter-spacing-unit: $base-spacing-unit * .75;
+$larger-spacing-unit: 50px;
+$xlarger-spacing-unit: 60px;
+$mega-spacing-unit: 70px;
+$giga-spacing-unit: $base-spacing-unit * 2;
+$ultra-spacing-unit: $larger-spacing-unit * 2;
+
+// Custom dimensions aka magic numbers
+$content-width: 915px;
+$wide-content-width: 980px;
+$extra-wide-content-width: 1000px;
+$max-site-width: 1440px;
+
+$breakpoints: (
+    small: 300px,
+    med: 500px,
+    x-med: 600px,
+    large: 700px,
+    x-large: 800px,
+    xx-large: 900px,
+    xxx-large: 1000px,
+    xxxx-large: 1100px,
+    xxxxx-large: 1200px,
+    xxxxxx-large: 1300px
+);

@@ -1,0 +1,14 @@
+.contained_content {
+    @include margin_left_right_auto;
+
+    max-width: rem($content-width);
+    width: 100%;
+
+    &--wide {
+        max-width: rem($wide-content-width);
+    }
+
+    &--extra_wide {
+        max-width: rem($extra-wide-content-width);
+    }
+}

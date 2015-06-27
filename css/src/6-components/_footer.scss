@@ -1,0 +1,102 @@
+.footer {
+    margin-bottom: rem($mega-spacing-unit);
+    
+    &__breadcrumb {
+        margin-bottom: rem($half-spacing-unit);
+        padding-left: rem($half-spacing-unit);
+        padding-right: rem($half-spacing-unit);
+        
+        @media (min-width: map-get($breakpoints, 'med')) {
+            margin-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &__equal {
+        margin-bottom: rem($half-spacing-unit);
+        padding-left: rem($half-spacing-unit);
+        padding-right: rem($half-spacing-unit);
+
+        @media (min-width: map-get($breakpoints, 'med')) {
+            @include flexbox_row_between;
+
+            align-items: center;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        + * {
+            margin-bottom: rem($quarter-spacing-unit);
+        }
+    }
+
+    &__content {
+        @include paragraph_size;
+
+        margin-bottom: rem($half-spacing-unit);
+
+        @media (min-width: map-get($breakpoints, 'med')) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__social {
+        @media (min-width: map-get($breakpoints, 'med')) {
+            text-align: right;
+        }
+    }
+
+    &__list {
+        @include list_reset;
+    }
+
+    &__list_item {
+        display: inline-block;
+        margin-right: rem($quarter-spacing-unit);
+        margin-top: rem($quarter-spacing-unit);
+        vertical-align: middle;
+
+        @media (min-width: map-get($breakpoints, 'med')) {
+            margin-right: rem($three-quarter-spacing-unit);
+        }
+    }
+
+    &__list_link {
+        @include paragraph_size;
+        @include heavy_font_family;
+
+        text-decoration: none;
+    }
+
+    &__logo {
+        height: 25px;
+        width: 66px;
+    }
+
+    &__secondary {
+        border-top: $light-grey 1px solid;
+        padding-left: rem($half-spacing-unit);
+        padding-right: rem($half-spacing-unit);
+        padding-top: rem($half-spacing-unit);
+
+        @media (min-width: map-get($breakpoints, 'med')) {
+            @include flexbox_row_between;
+
+            align-items: center;
+            margin-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 0;
+        }
+
+        + * {
+            margin-bottom: rem($quarter-spacing-unit);
+        }
+    }
+
+    &__copyright {
+        @include small_font_size;
+    }
+
+}
